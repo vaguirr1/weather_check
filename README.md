@@ -6,6 +6,8 @@ This program is checking the local weather in F. The program will use python fil
 This program is based on: https://www.youtube.com/watch?v=VaqYFs7Az50
 
 [No Longer Doing the EXEL, SWITCHED TO GUI APP]
+[This program was unable to run due to system and issue with the excel]
+
 [This is No GO]This program is checking the local weather in both C or F. The program will use both excel and python file to find the weather based on user input, and will generate the result in a excel file. The program will usethe Metaweather API to get its data. For this particular Python code libraries xlwings & requests will be used. This program is based on: https://www.youtube.com/watch?v=m0UPBRJdsas
 
 
