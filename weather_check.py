@@ -10,7 +10,7 @@ from PIL import Image, ImageTk
 import ttkbootstrap as ttk 
 
 def get_weather(city):
-    API_KEY = 'a54eab6943ebb74318408c5c30a3ec2d' 
+    API_KEY = 'NEED_ANY_API_KEY_FROM_OPENWEATHERMAP.ORG' 
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}'  
     res = requests.get(url)
 
