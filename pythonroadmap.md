@@ -22,12 +22,16 @@ PROJECT ROADMAP - Weather Check
 
 Sprint 3
 
--[ON GOING] Debug AND Test Run Program
+-[DONE] Debug AND Test Run Program
 
--[] FINALIZE PROGRAMING
+-[DONE] FINALIZE PROGRAMING
 
--[] CREATE PPT
+-[DONE] CREATE SPLASH and FINAL PPT
 
--[] SUMBIT PPT ON D2L ON TIME
+-[DONE] SUMBIT SPLASH PPT ON D2L ON TIME
 
--[] UPLOAD PPT ON GITHUB
+-[DONE] UPLOAD SPLASH PPT ON GITHUB
+
+-[] Present
+
+-[]Upload to teams, github, and/or d2l
