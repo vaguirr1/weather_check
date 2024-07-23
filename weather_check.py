@@ -1,6 +1,8 @@
 """
 This program is based on a YouTube video: https://www.youtube.com/watch?v=VaqYFs7Az50
 
+Link to openweather: https://openweathermap.org/
+
 """
 
 import tkinter as tk
@@ -60,7 +62,9 @@ def search():
     pressure_label.configure(text=f"Pressure: {pressure} hPa")  
     precipitation_label.configure(text=f"Precipitation: {precipitation} mm")  
     uv_label.configure(text=f"UV Index: {uv_index}")  
-    
+
+
+   """ 
 #This will update the background color based on the weather category
     if 'rain' "thunderstrom" or "cloud" in description.lower():
         root.configure(bg='darkgray')  
@@ -72,6 +76,39 @@ def search():
         root.configure(bg='white')  
     else:
         root.configure(bg='lightgreen')
+
+        """
+"""
+#This functions searches by the weather condtions, 
+and lists all the captial cities that have that weather 
+type.
+
+"""
+def get_captials_with_weather
+    API_KEY = "API_KEY_OPENWEATHER"
+    capitals = ['Ankara', 'Athens', 'Baghdad', 'Baku', 'Bamako', 'Bandar Seri Begawan', 'Bangkok', 'Bangui', 'Banjul', 'Basseterre', 'Beijing', 'Beirut', 'Belgrade', 'Belmopan', 'Berlin', 'Bern', 'Bishkek', 'Bissau', 'Bogotá', 'Brasília', 'Bratislava', 'Brazzaville', 'Bridgetown', 'Brussels', 'Bucharest', 'Budapest', 'Buenos Aires', 'Cairo', 'Canberra', 'Caracas', 'Castries', 'Copenhagen', 'Dakar', 'Damascus', 'Dhaka', 'Djibouti', 'Doha', 'Dublin', 'Dushanbe', 'Freetown', 'Gaborone', 'Georgetown', 'Hanoi', 'Harare', 'Havana', 'Helsinki', 'Honiara', 'Islamabad', 'Jakarta', 'Jamestown', 'Juba', 'Kabul', 'Kampala', 'Kathmandu', 'Khartoum', 'Kigali', 'Kingston', 'Kinshasa', 'Kuala Lumpur', 'Kuwait City', 'La Paz', 'Libreville', 'Lilongwe', 'Lima', 'Lisbon', 'Ljubljana', 'Lomé', 'London', 'Luanda', 'Lusaka', 'Madrid', 'Majuro', 'Malabo', 'Malé', 'Managua', 'Manama', 'Manila', 'Maputo', 'Maseru', 'Mbabane', 'Minsk', 'Mogadishu', 'Monaco', 'Monrovia', 'Montevideo', 'Moroni', 'Moscow', 'Muscat', "N'Djamena", 'Nairobi', 'Nassau', 'Naypyidaw', 'New Delhi', 'Niamey', 'Nicosia', 'Nouakchott', "Nukuʻalofa", 'Nur-Sultan', 'Oslo', 'Ottawa', 'Ouagadougou', 'Panama City', 'Paramaribo', 'Paris', 'Phnom Penh', 'Port Louis', 'Port Moresby', 'Port Vila', 'Port-au-Prince', 'Port of Spain', 'Porto-Novo', 'Prague', 'Praia', 'Pretoria', 'Pyongyang', 'Quito', 'Rabat', 'Reykjavik', 'Riga', 'Riyadh', 'Rome', 'Roseau', 'San José', 'San Marino', 'San Salvador', 'Sanaa', 'Santiago', 'Santo Domingo', 'São Tomé', 'Sarajevo', 'Seoul', 'Singapore', 'Skopje', 'Sofia', 'Stockholm', 'Suva', 'Tallinn', 'Tarawa', 'Tashkent', 'Tbilisi', 'Tehran', 'Thimphu', 'Tirana', 'Tokyo', 'Tripoli', 'Tunis', 'Ulaanbaatar', 'Vaduz', 'Valletta', 'Vatican City', 'Victoria', 'Vienna', 'Vientiane', 'Vilnius', 'Warsaw', 'Washington', 'Wellington', 'Windhoek', 'Yamoussoukro', 'Yaoundé', 'Yerevan', 'Zagreb']
+    matching_cities = []
+
+    for captial in captials:
+        url = f'https://api.openweathermap.org/data/2.5/weather?q={capital}&appid={API_KEY}'
+        res = requests.get(url)
+
+        if res.status_code == 200:
+            weather = res.json()
+            description = weather['weather'][0]['description'].title()
+            if weather_type.lower() in description.lower():
+                matching_cities.append(capital)
+
+       if matching_cities:
+        messagebox.showinfo("Results", f"Cities with {weather_type.title()}: {', '.join(matching_cities)}")
+    else:
+        messagebox.showinfo("Results", f"No capital cities found with {weather_type.title()}")
+
+def search_weather_type():
+    weather_type = weather_type_entry.get()
+    get_capitals_with_weather(weather_type)
+        
+
 
 root = ttk.Window(themename='morph')  
 root.title('Weather Check')
@@ -103,5 +140,14 @@ precipitation_label.pack()
 
 uv_label = tk.Label(root, font=('Helvetica', 25)) 
 uv_label.pack()
+
+weather_type_label = tk.Label(root, text="Search for weather type in capital cities:\n (clouds, thunderstorm, rain, snow, clear, mist)", font=('Helvetica', 18 ))
+weather_type_label.pack(pady=10)
+
+weather_type_entry = ttk.Entry(root, font=('Helvetica', 18))  
+weather_type_entry.pack(pady=10)
+
+weather_type_button = ttk.Button(root, text='Search Weather Type', command=search_weather_type, bootstyle='warning')  
+weather_type_button.pack(pady=10)
 
 root.mainloop()
