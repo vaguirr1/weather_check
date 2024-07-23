@@ -26,4 +26,4 @@ API_KEY
 
 “Create a Weather App Using Python | Tutorial for Beginners.” YouTube, YouTube, 6 Mar. 2023, www.youtube.com/watch?v=VaqYFs7Az50. 
 
-Dominict, Thomas. “DOMINICT/Pythonteachingcode: This Repo Contains a Variety of Starter Project Code and Demo Code for Showing Different Capabilities and How to Use Them in Python.” Pythonteachingcode, github.com/dominict/pythonteachingcode. Accessed 19 July 2024. 
+Dominict, Thomas. “DOMINICT/Pythonteachingcode: This Repo Contains a Variety of Starter Project Code and Demo Code for Showing Different Capabilities and How to Use Them in Python.” Pythonteachingcode, https://github.com/dominict/pythonteachingcode.
