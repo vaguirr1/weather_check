@@ -32,6 +32,6 @@ Sprint 3
 
 -[DONE] UPLOAD SPLASH PPT ON GITHUB
 
--[] Present
+-[DONE] Present and record on teams.
 
--[]Upload to teams, github, and/or d2l
+-[DONE]Upload to teams, github, and/or d2l
