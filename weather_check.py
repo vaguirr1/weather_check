@@ -2,6 +2,8 @@
 This program is based on a YouTube video: https://www.youtube.com/watch?v=VaqYFs7Az50
 
 Link to openweather: https://openweathermap.org/
+-Will need an API Key from openweathermap, they are
+free ones registering with an exmail. 
 
 """
 
@@ -151,3 +153,5 @@ weather_type_button = ttk.Button(root, text='Search Weather Type', command=searc
 weather_type_button.pack(pady=10)
 
 root.mainloop()
+
+
