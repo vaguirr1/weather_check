@@ -5,7 +5,7 @@ This python program is checking the local weather in F. The program will use pyt
 
 
 Majority of the program was inspired by this code and I have added some new weather realted returns plus also added weather check based on water condition
-which checks all the captiol city of each country and returns the country that match that weather. For example, in the sencond search box user can search "Thunderstorm" and the function will cheack all the captial that have thunderstorm and will list those countries.
+which checks all the cities of each country and returns the country that match that weather. For example, in the second search box user can search "Thunderstorm" and the function will check all the cities that will have thunderstorms and it will list those countries.
 
 
 # Inspiration:
